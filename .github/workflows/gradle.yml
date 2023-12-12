@@ -48,6 +48,6 @@ jobs:
         NAME: littleconan
         REPO: backend
       run: |
-        docker build --build-arg JAR_FILE=target/*.jar -t $REPO . 
+        docker build --build-arg JAR_FILE=build/libs/*.jar -t $REPO . 
         docker tag $REPO:latest $NAME/$REPO:latest 
         docker push $NAME/$REPO:latest 
